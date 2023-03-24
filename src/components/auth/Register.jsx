@@ -22,7 +22,7 @@ const Register = () => {
     }
 
     return (
-        <div className="boder p-3 bg-light" style={{ marginTop: 70 }}>
+        <div className="border p-3 bg-light" style={{ marginTop: 80 }}>
             <h1>Register</h1>
             <div className="form-group">
                 <label>Name</label>

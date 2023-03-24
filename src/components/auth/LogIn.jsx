@@ -24,7 +24,7 @@ const LogIn = () => {
         
         <div 
             className="border p-3 mx-auto"
-            style={{ maxWidth: 400, marginTop: 60 }}
+            style={{ maxWidth: 400, marginTop: 80 }}
         >
             <h1>Log In</h1>
             <div className="form-group">

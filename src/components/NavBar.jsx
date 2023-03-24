@@ -14,6 +14,14 @@ const NavBar = () => {
         navigate("/add-article")
     }
 
+    const onLogIn = () => {
+        navigate("/login")
+    }
+
+    const onRegister = () => {
+        navigate("/register")
+    }
+
     return (
         <div className="fixed-top" style={{ backgroundColor: "white" }}>
             <nav className="navbar d-flex justify-content-between align-items-center">
@@ -21,7 +29,7 @@ const NavBar = () => {
                     <Link className="nav-link" to="/">
                         <img 
                             src="my-blog-logo.png" 
-                            height={90} 
+                            height={60} 
                             alt="logo"
                             style={{
                                 marginLeft: "10px"
@@ -31,7 +39,7 @@ const NavBar = () => {
                 </div>
                 <div>
                     {
-                        user && (
+                        user ? (
                             <>
                                 <span className="pe-4">
                                     signed in as { user.displayName || user.email }
@@ -47,6 +55,21 @@ const NavBar = () => {
                                     onClick={() => {signOut(auth)}}
                                 >
                                     Log Out
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                <button 
+                                    className="btn btn-primary btn-sm me-3"
+                                    onClick={() => {onLogIn()}}
+                                >
+                                    Log In
+                                </button>
+                                <button 
+                                    className="btn btn-primary btn-sm me-3"
+                                    onClick={() => {onRegister()}}
+                                >
+                                    Register
                                 </button>
                             </>
                         )
