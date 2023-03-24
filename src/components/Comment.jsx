@@ -16,7 +16,7 @@ const Comment = ({id}) => {
         onSnapshot(docRef, (snapshot) => {
             setComments(snapshot.data().comments)
         })
-    }, [])
+    }, [id])
 
     const handleChangeComment = (e) => {
         if(e.key === "Enter") {
@@ -62,7 +62,7 @@ const Comment = ({id}) => {
                                     <span className=
                                         {`badge ${ 
                                             user === currentlyLoggedinUser.uid
-                                            ? "bg-success mx-3"
+                                            ? "bg-primary mx-3"
                                             : "bg-primary mx-3"
                                         }`}
                                     >

@@ -22,6 +22,11 @@ const NavBar = () => {
         navigate("/register")
     }
 
+    const onSignOut = () => {
+        signOut(auth)
+        navigate("/")
+    }
+
     return (
         <div className="fixed-top" style={{ backgroundColor: "white" }}>
             <nav className="navbar d-flex justify-content-between align-items-center">
@@ -45,14 +50,14 @@ const NavBar = () => {
                                     signed in as { user.displayName || user.email }
                                 </span>
                                 <button 
-                                    className="btn btn-success btn-sm me-3"
+                                    className="btn btn-primary btn-sm me-3"
                                     onClick={() => {onAddArticle()}}
                                 >
                                     Add Article
                                 </button>
                                 <button 
                                     className="btn btn-danger btn-sm me-3"
-                                    onClick={() => {signOut(auth)}}
+                                    onClick={() => {onSignOut()}}
                                 >
                                     Log Out
                                 </button>

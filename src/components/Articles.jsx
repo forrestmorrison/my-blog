@@ -58,7 +58,7 @@ const Articles = () => {
                                     <div className="row">
                                         <div className="col-6">
                                             { createdBy && (
-                                                <span className="badge bg-success">{createdBy}</span>
+                                                <span className="badge bg-primary">{createdBy}</span>
                                             )}
                                         </div>
                                         <div className="col-6 d-flex flex-row-reverse">

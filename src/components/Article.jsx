@@ -17,7 +17,7 @@ const Article = () => {
         onSnapshot(docRef, (snapshot) => {
             setArticle({ ...snapshot.data(), id: snapshot.id })
         })
-    }, [])
+    }, [id])
 
     return (
         <div className="container" style={{ marginTop: 70 }}>
@@ -36,7 +36,7 @@ const Article = () => {
                             <h5>Author: {article.createdBy}</h5>
                             <div>Posted on: {article.createdAt.toDate().toDateString()}</div>
                             <hr/>
-                            <h4>{article.description}</h4>
+                            <p>{article.description}</p>
                             <div className="d-flex flex-row-reverse">
                                 { user && <LikeArticle id={id} likes={article.likes} /> }
                                 <div className="pe-2">
