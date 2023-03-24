@@ -16,12 +16,12 @@ const NavBar = () => {
 
     return (
         <div className="fixed-top" style={{ backgroundColor: "white" }}>
-            <nav className="navbar">
+            <nav className="navbar d-flex justify-content-between align-items-center">
                 <div>
                     <Link className="nav-link" to="/">
                         <img 
-                            src="4rest-logo.jpg" 
-                            height={30} 
+                            src="my-blog-logo.png" 
+                            height={90} 
                             alt="logo"
                             style={{
                                 marginLeft: "10px"

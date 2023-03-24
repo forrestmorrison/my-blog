@@ -43,7 +43,7 @@ const Articles = () => {
                         likes,
                         comments 
                     }) => (
-                        <div className="mt-3 p-3" key={id}>
+                        <div className="mt-5 p-3" key={id}>
                             <div className="row">
                                 <div className="col-3">
                                     <Link to={`/article/${id}`}>
