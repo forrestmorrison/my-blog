@@ -16,29 +16,21 @@ const NavBar = () => {
         <div className="links">
             <Link to="/createpost"
                 style={{
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#0275d8",
                     margin: "0 10px",
                     fontWeight: "bold",
                     textDecoration: "none"
                 }}
             >
-                new post
+                <a href='/createpost'>new post</a>
             </Link>
             <Link to="/"
                 style={{
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#0275d8",
                     margin: "0 10px",
                     fontWeight: "bold",
                     textDecoration: "none"
                 }}
             >
-                log out
+                <a href='/'>log out</a>
             </Link>
         </div>
     </div>

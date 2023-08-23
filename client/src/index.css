@@ -52,6 +52,15 @@ header {
   display: flex;
 }
 
+a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(140, 210, 230)
+}
+
 /* CreatePost */
 
 .create-post {
