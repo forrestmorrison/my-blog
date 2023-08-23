@@ -18,7 +18,6 @@ const NavBar = () => {
                 style={{
                     margin: "0 10px",
                     fontWeight: "bold",
-                    textDecoration: "none"
                 }}
             >
                 <a href='/createpost'>new post</a>
@@ -27,7 +26,6 @@ const NavBar = () => {
                 style={{
                     margin: "0 10px",
                     fontWeight: "bold",
-                    textDecoration: "none"
                 }}
             >
                 <a href='/'>log out</a>
