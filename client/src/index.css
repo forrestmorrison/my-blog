@@ -55,6 +55,7 @@ header {
 a {
   color: #0275d8;
   text-decoration: none;
+  transition: all 0.5s;
 }
 
 a:hover {
