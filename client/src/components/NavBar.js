@@ -57,13 +57,13 @@ const NavBar = () => {
                         >
                             <a href='/login'>log in</a>
                         </Link>
-                        <Link to="/"
+                        <Link to="/signup"
                             style={{
                                 margin: "0 10px",
                                 fontWeight: "bold",
                             }}
                         >
-                            <a href='/'>sign up</a>
+                            <a href='/signup'>sign up</a>
                         </Link>
                     </div>
                 </div>
