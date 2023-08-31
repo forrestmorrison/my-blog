@@ -3,7 +3,7 @@ import Logo from "../images/my-blog-logo.png"
 
 const NavBar = () => {
 
-    const user = true
+    const user = false
 
     return (
         <div className="container">
@@ -49,13 +49,13 @@ const NavBar = () => {
                         <img src={Logo} alt="logo" className="logo" />
                     </Link>
                     <div className="links">
-                        <Link to="/createpost"
+                        <Link to="/login"
                             style={{
                                 margin: "0 10px",
                                 fontWeight: "bold",
                             }}
                         >
-                            <a href='/'>log in</a>
+                            <a href='/login'>log in</a>
                         </Link>
                         <Link to="/"
                             style={{

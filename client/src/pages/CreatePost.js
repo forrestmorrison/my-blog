@@ -45,7 +45,7 @@ const CreatePost = (props) => {
             backgroundColor: "#0275d8",
             color: "white",
             "&:hover": {
-              color: "#0275d8"
+              backgroundColor: "#8CD2D2"
             }
           }}
           type="submit"
