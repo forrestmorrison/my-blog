@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { submitPost } from "../features/postSlice"
 import { Button, TextField } from "@mui/material"
 
 const CreatePost = (props) => {
@@ -50,7 +49,6 @@ const CreatePost = (props) => {
           }}
           type="submit"
           onClick={() => {
-            dispatch(submitPost({ title: title, content: content }))
           }}
         >
           Submit
