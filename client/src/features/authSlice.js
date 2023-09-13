@@ -1,6 +1,8 @@
 import axios from "axios"
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
+const USERS_URL = "/auth"
+
 const initialState = { user: undefined }
 
 const saveToLocalStorage = (token) => {
