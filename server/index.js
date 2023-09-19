@@ -14,19 +14,20 @@ const config = {
     issuerBaseURL: process.env.AUTH0_ISSUER_URL
   };
 
+// // auth router attaches /login, /logout, and /callback routes to the baseURL
+// app.use(auth(config));
+
+// // req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+//   });
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(cors())
 
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-app.use(auth(config));
-
-// req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-  });
+app.get(`https://newsapi.org/v2/everything?q=Apple&from=2023-09-19&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`)
 
 app.listen(port, () => {
     console.log(`Web server is listening on port ${port}`)
