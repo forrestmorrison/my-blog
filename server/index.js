@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000
 const bodyParser = require("body-parser")
 const app = express()
 const cors = require("cors")
+require("dotenv").config()
 
 const config = {
     authRequired: false,
