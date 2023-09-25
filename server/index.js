@@ -23,23 +23,36 @@ const config = {
 //     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 //   });
 
+const options = {
+    method: 'POST',
+    url: 'https://newsnow.p.rapidapi.com/newsv2',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': `${process.env.X_RAPID_API_KEY}`,
+      'X-RapidAPI-Host': 'newsnow.p.rapidapi.com'
+    },
+    body: {
+      query: 'AI',
+      page: 1,
+      time_bounded: true,
+      from_date: '23/08/2023',
+      to_date: '23/09/2023',
+      location: '',
+      category: 'Tech Start-ups',
+      source: ''
+    },
+    json: true
+  };
+  
+  request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+  
+      console.log(body);
+  });
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(cors())
-
-app.get(`/everything?q=Apple&from=2023-09-19&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`, (req, res) => {
-    request(
-        { url: `https://newsapi.org/v2/everything?q=Apple&from=2023-09-19&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`},
-        (error, response, body) => {
-            if (error || response.statusCode !== 200) {
-                return res.status(500).json({ type: "error", message: error.message })
-            }
-
-            res.json(JSON.parse(body))
-        }
-    )
-})
 
 app.listen(port, () => {
     console.log(`Web server is listening on port ${port}`)
