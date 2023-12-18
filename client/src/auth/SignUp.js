@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Button, TextField } from "@mui/material"
+import { Button, Icon, TextField } from "@mui/material"
+import { IconContext } from "react-icons"
+import { FcGoogle } from "react-icons/fc"
 
 const SignUp = () => {
     const [name, setName] = useState("")
@@ -37,20 +39,41 @@ const SignUp = () => {
                     onChange={handlePasswordChange}
                     required
                 />
-                <Button
-                    sx={{
-                        marginTop: "10px",
-                        fontWeight: "bold",
-                        backgroundColor: "#0275d8",
-                        color: "white",
-                        "&:hover": {
-                        backgroundColor: "#8CD2D2"
-                        }
-                    }}
-                    type="submit"
-                >
-                    Sign Up
-                </Button>
+                <div className="buttons">
+                    <Button
+                        sx={{
+                            marginTop: "10px",
+                            fontWeight: "bold",
+                            backgroundColor: "#0275d8",
+                            color: "white",
+                            "&:hover": {
+                            backgroundColor: "#8CD2D2"
+                            }
+                        }}
+                        type="submit"
+                    >
+                        Sign Up
+                    </Button>
+                    <Button
+                        sx={{
+                            marginTop: "10px",
+                            fontWeight: "bold",
+                            backgroundColor: "LightGrey",
+                            color: "black",
+                            "&:hover": {
+                            backgroundColor: "#8CD2D2"
+                            }
+                        }}
+                    >
+                        
+                        <div className="sign-up-google">
+                            <p>Sign up with</p>
+                            <IconContext.Provider value={{ size: "25px" }}>
+                                <FcGoogle /> 
+                            </IconContext.Provider>
+                        </div>
+                    </Button>
+                </div>
             </form>
         </div>
     )

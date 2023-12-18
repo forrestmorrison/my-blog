@@ -43,13 +43,14 @@ const options = {
       source: ''
     },
     json: true
-  };
+};
   
-  request(options, function (error, response, body) {
+request(options, function (error, response, body) {
       if (error) throw new Error(error);
   
       console.log(body);
-  });
+});
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 

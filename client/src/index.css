@@ -67,6 +67,26 @@ a:hover {
   color: #8CD2D2
 }
 
+/* SignUp */
+
+.sign-up p {
+  margin: 0px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sign-up-google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
 /* CreatePost */
 
 .create-post {
