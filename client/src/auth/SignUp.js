@@ -58,10 +58,10 @@ const SignUp = () => {
                         sx={{
                             marginTop: "10px",
                             fontWeight: "bold",
-                            backgroundColor: "LightGrey",
-                            color: "black",
+                            backgroundColor: "#8CD2D2",
+                            color: "white",
                             "&:hover": {
-                            backgroundColor: "#8CD2D2"
+                            backgroundColor: "lightgrey"
                             }
                         }}
                     >

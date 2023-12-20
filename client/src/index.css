@@ -87,6 +87,12 @@ a:hover {
   gap: 5px;
 }
 
+/* Login */
+
+.log-in p {
+  margin: 0px;
+}
+
 /* CreatePost */
 
 .create-post {
