@@ -9,7 +9,7 @@ const AddNewPost = () => {
 
     return (
         <div className="create-post">
-            <form noValidate autoComplete="off" className="form" onSubmit={onAddPost}>
+            <form noValidate autoComplete="off" className="form">
                 <h4>title</h4>
                 <TextField 
                     sx={{
