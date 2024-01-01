@@ -26,7 +26,7 @@ const CreatePost = (props) => {
     e.preventDefault()
     try {
       setAddRequestStatus("pending")
-      dispatch(addNewPost({ title, content }))
+      dispatch(addNewPost({ title, content })).unwrap()
       setTitle("")
       setContent("")
     } catch (err) {

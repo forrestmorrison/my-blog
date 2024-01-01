@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
 const POSTS_URL = "/posts"
 
-const initialState = { posts: [] }
+const initialState = []
 
 export const getPosts = createAsyncThunk("posts/getPosts", async (posts) => {
     const response = await axios.get(`${POSTS_URL}`, posts)
